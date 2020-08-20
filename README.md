@@ -1,0 +1,1 @@
+Abloy pre-assignment
