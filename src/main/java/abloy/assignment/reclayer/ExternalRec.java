@@ -1,7 +1,7 @@
-package assignment.demo.reclayer;
+package abloy.assignment.reclayer;
 
-import assignment.demo.bo.data.Movie;
-import assignment.demo.bo.service.GenreExternalRecInput;
+import abloy.assignment.bo.data.Movie;
+import abloy.assignment.bo.service.GenreExternalRecInput;
 
 import java.util.List;
 

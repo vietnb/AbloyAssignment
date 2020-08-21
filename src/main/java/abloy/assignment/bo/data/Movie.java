@@ -1,4 +1,4 @@
-package assignment.demo.bo.data;
+package abloy.assignment.bo.data;
 
 import com.google.gson.annotations.Expose;
 

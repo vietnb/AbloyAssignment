@@ -1,13 +1,14 @@
-package assignment.demo.servicelayer;
+package abloy.assignment.servicelayer;
 
-import assignment.demo.bo.data.Movie;
-import assignment.demo.bo.service.GenreRecInput;
+import abloy.assignment.bo.data.Movie;
+import abloy.assignment.bo.service.GenreRecInput;
+import abloy.assignment.reclayer.InternalRec;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import assignment.demo.reclayer.InternalRec;
+
 import java.util.List;
 
 @RestController

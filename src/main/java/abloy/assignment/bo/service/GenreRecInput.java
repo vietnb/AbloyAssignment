@@ -1,4 +1,4 @@
-package assignment.demo.bo.service;
+package abloy.assignment.bo.service;
 
 public class GenreRecInput {
     private String genres;

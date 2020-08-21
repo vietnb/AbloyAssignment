@@ -1,6 +1,6 @@
-package assignment.demo.dblayer.connection;
+package abloy.assignment.dblayer.connection;
 
-import assignment.demo.appexception.DbAccessException;
+import abloy.assignment.appexception.DbAccessException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
