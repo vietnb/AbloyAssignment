@@ -1,4 +1,7 @@
 package appexception;
 
-public class DbAccessException {
+public class DbAccessException extends Exception {
+    public DbAccessException(String s) {
+        super(s);
+    }
 }
