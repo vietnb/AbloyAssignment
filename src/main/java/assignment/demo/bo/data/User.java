@@ -1,13 +1,8 @@
-package bo.data;
+package assignment.demo.bo.data;
 
-public class Genre {
-
+public class User {
     private int id;
     private String name;
-
-    public Genre(int id) {
-        this.id = id;
-    }
 
     public int getId() {
         return id;

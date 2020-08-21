@@ -1,4 +1,4 @@
-package bo.service;
+package assignment.demo.bo.service;
 
 public class GenreRecInput {
     private String genres;

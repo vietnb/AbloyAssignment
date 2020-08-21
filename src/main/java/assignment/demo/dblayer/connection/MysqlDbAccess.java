@@ -1,6 +1,6 @@
-package dblayer.connection;
+package assignment.demo.dblayer.connection;
 
-import appexception.DbAccessException;
+import assignment.demo.appexception.DbAccessException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

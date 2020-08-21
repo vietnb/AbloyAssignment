@@ -1,8 +1,17 @@
-package bo.data;
+package assignment.demo.bo.data;
 
-public class User {
+import com.google.gson.annotations.Expose;
+
+public class Genre {
+
     private int id;
+
+    @Expose
     private String name;
+
+    public Genre(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;

@@ -1,9 +1,9 @@
-package dblayer.model;
+package assignment.demo.dblayer.model;
 
-import appexception.DbAccessException;
-import bo.data.Genre;
-import bo.data.Movie;
-import dblayer.connection.TextFileDbAccess;
+import assignment.demo.appexception.DbAccessException;
+import assignment.demo.bo.data.Genre;
+import assignment.demo.bo.data.Movie;
+import assignment.demo.dblayer.connection.TextFileDbAccess;
 
 import java.util.ArrayList;
 import java.util.List;

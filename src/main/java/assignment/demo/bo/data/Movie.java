@@ -1,14 +1,21 @@
-package bo.data;
+package assignment.demo.bo.data;
+
+import com.google.gson.annotations.Expose;
 
 import java.util.Date;
 import java.util.List;
 
 public class Movie {
 
+    @Expose
     private int id;
+    @Expose
     private String name;
+    @Expose
     private float rating;
+
     private Date date;
+    @Expose
     private List<Genre> genres;
 
     public int getId() {

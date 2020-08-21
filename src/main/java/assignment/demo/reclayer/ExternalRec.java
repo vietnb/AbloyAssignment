@@ -1,9 +1,7 @@
-package reclayer;
+package assignment.demo.reclayer;
 
-import bo.data.Movie;
-import bo.service.GenreExternalRecInput;
-import bo.service.GenreRecInput;
-import dblayer.model.MovieFetching;
+import assignment.demo.bo.data.Movie;
+import assignment.demo.bo.service.GenreExternalRecInput;
 
 import java.util.List;
 
