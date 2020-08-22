@@ -1,6 +1,6 @@
 package abloy.assignment.bo.service;
 
-public class GenreRecInput {
+public class GenreRecParams {
     private String genres;
 
     public String getGenres() {

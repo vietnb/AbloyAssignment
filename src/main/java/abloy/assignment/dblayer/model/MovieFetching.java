@@ -14,11 +14,11 @@ public class MovieFetching {
     /**
      * get movie by genre list
      *
-     * @param genre
+     * @param gIds
      * @return movie list
      */
-    public List<Movie> getMovieByGenre(String genre) {
-        if (genre == null) return null;
+    public List<Movie> getMovieByGenre(String gIds) {
+        if (gIds == null) return null;
 
         List<Movie> movies = null;
         TextFileDbAccess textFileDbAccess = new TextFileDbAccess("./db/movie_db");
@@ -51,11 +51,13 @@ public class MovieFetching {
                     String[] gArr = mArr[3].split(",");
                     for (String gId : gArr) {
                         // movie has the input genre pr not
-                        if (gId != null && genre.contains(gId)) {
+                        if (gIds.contains(gId)) {
+                            isRightMovie = true;
+                        }
+                        if (gId != null) {
                             int id = Integer.parseInt(gId);
                             Genre g = new Genre(id);
                             genres.add(g);
-                            isRightMovie = true;
                         }
                     }
                 }

@@ -1,7 +1,8 @@
 package abloy.assignment.servicelayer;
 
 import abloy.assignment.bo.data.Movie;
-import abloy.assignment.bo.service.GenreRecInput;
+import abloy.assignment.bo.service.GenreRecParams;
+import abloy.assignment.bo.service.MovieSuggestion;
 import abloy.assignment.reclayer.InternalRec;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -18,11 +19,11 @@ public class RecService {
     public String rec(@PathVariable String genres) {
         Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 
-        GenreRecInput genreRecInput = new GenreRecInput();
-        genreRecInput.setGenres(genres);
+        GenreRecParams genreRecParams = new GenreRecParams();
+        genreRecParams.setGenres(genres);
 
         InternalRec internalRec = new InternalRec();
-        List<Movie> movies = internalRec.recommend(genreRecInput);
+        List<MovieSuggestion> movies = internalRec.recommend(genreRecParams);
         return gson.toJson(movies);
     }
 }

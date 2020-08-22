@@ -5,8 +5,6 @@ import com.google.gson.annotations.Expose;
 public class Genre {
 
     private int id;
-
-    @Expose
     private String name;
 
     public Genre(int id) {

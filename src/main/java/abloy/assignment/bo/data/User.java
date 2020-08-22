@@ -1,6 +1,7 @@
 package abloy.assignment.bo.data;
 
 public class User {
+
     private int id;
     private String name;
 
