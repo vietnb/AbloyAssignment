@@ -5,7 +5,8 @@
     - e.g: http://localhost:8888/rec/1,2
         --> get movie suggestions for genre preference has id 1 (action) and 2 (comedy)
         
-2. Recommendations from external services like Netflix and IMDB
+2. Recommendations from external services like Netflix and IMDB:
+    
     The business layer has two types of Recommendation:
     - InternalRecommendation: currently used assuming I don't have access to Netflix's or IMDB's API yet. 
     - ExternalRecommendation: in case I have access to those APIs. 
