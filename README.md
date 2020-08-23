@@ -2,7 +2,7 @@
     - {host} 
     - {port}
     - {movie_genre_preference}: list of user's movie genre preference
-    - e.g: 
+    - e.g: http://localhost:8888/rec/1,2
         --> get movie suggestions for genre preference has id 1 (action) and 2 (comedy)
         
 2. Recommendations from external services like Netflix and IMDB
