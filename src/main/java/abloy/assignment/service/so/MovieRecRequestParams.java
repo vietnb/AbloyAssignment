@@ -1,6 +1,6 @@
-package abloy.assignment.bo.service;
+package abloy.assignment.service.so;
 
-public class GenreRecParams {
+public class MovieRecRequestParams {
     private String genres;
 
     public String getGenres() {

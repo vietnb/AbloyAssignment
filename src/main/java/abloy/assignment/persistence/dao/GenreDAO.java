@@ -1,14 +1,14 @@
-package abloy.assignment.dblayer.model;
+package abloy.assignment.persistence.dao;
 
 import abloy.assignment.appexception.DbAccessException;
-import abloy.assignment.bo.data.Genre;
-import abloy.assignment.dblayer.connection.TextFileDbAccess;
+import abloy.assignment.persistence.entities.Genre;
+import abloy.assignment.persistence.connection.TextFileDbAccess;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GenreFetching {
+public class GenreDAO {
 
     /**
      * get genre by id

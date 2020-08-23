@@ -1,34 +1,33 @@
-package abloy.assignment.reclayer;
+package abloy.assignment.business;
 
-import abloy.assignment.bo.data.Genre;
-import abloy.assignment.bo.data.Movie;
-import abloy.assignment.bo.service.GenreRecParams;
-import abloy.assignment.bo.service.MovieSuggestion;
-import abloy.assignment.dblayer.model.GenreFetching;
-import abloy.assignment.dblayer.model.MovieFetching;
+import abloy.assignment.persistence.entities.Genre;
+import abloy.assignment.persistence.entities.Movie;
+import abloy.assignment.service.so.MovieRecRequestParams;
+import abloy.assignment.service.so.MovieSuggestion;
+import abloy.assignment.persistence.dao.GenreDAO;
+import abloy.assignment.persistence.dao.MovieDAO;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class InternalRec extends RecAbs<GenreRecParams, List<MovieSuggestion>> {
+public class InternalRecommendation implements
+        IRecommendation<MovieRecRequestParams, List<MovieSuggestion>> {
 
-    public List<MovieSuggestion> recommend(GenreRecParams input) {
+    public List<MovieSuggestion> recommend(MovieRecRequestParams input) {
         if (input == null) return null;
 
-        GenreFetching genreFetching = new GenreFetching();
-        List<Genre> genres = genreFetching.getGenreById(input.getGenres());
+        GenreDAO genreDAO = new GenreDAO();
+        List<Genre> genres = genreDAO.getGenreById(input.getGenres());
         Map<Integer, String> genreKeyValue = genres.stream().
                 collect(Collectors.toMap(Genre::getId, Genre::getName));
 
 
-        MovieFetching movieFetching = new MovieFetching();
+        MovieDAO movieDAO = new MovieDAO();
         List<Movie> movies = null;
         if (input.getGenres() != null) {
-            movies = movieFetching.getMovieByGenre(input.getGenres());
+            movies = movieDAO.getMovieByGenre(input.getGenres());
         }
 
         List<MovieSuggestion> results = new ArrayList<>();

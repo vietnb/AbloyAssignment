@@ -1,15 +1,9 @@
-package abloy.assignment.bo.data;
+package abloy.assignment.persistence.entities;
 
-import com.google.gson.annotations.Expose;
-
-public class Genre {
+public class User {
 
     private int id;
     private String name;
-
-    public Genre(int id) {
-        this.id = id;
-    }
 
     public int getId() {
         return id;

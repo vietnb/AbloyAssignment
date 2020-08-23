@@ -1,4 +1,4 @@
-package abloy.assignment.dblayer.connection;
+package abloy.assignment.persistence.connection;
 
 import abloy.assignment.appexception.DbAccessException;
 

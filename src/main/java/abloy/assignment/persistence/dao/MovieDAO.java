@@ -1,15 +1,15 @@
-package abloy.assignment.dblayer.model;
+package abloy.assignment.persistence.dao;
 
 import abloy.assignment.appexception.DbAccessException;
-import abloy.assignment.bo.data.Genre;
-import abloy.assignment.bo.data.Movie;
-import abloy.assignment.dblayer.connection.TextFileDbAccess;
+import abloy.assignment.persistence.entities.Genre;
+import abloy.assignment.persistence.entities.Movie;
+import abloy.assignment.persistence.connection.TextFileDbAccess;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MovieFetching {
+public class MovieDAO {
 
     /**
      * get movie by genre list

@@ -1,23 +1,15 @@
-package abloy.assignment.bo.service;
+package abloy.assignment.persistence.entities;
 
-import com.google.gson.annotations.Expose;
+import java.util.Date;
+import java.util.List;
 
-public class MovieSuggestion {
-    @Expose
+public class Movie {
+
     private int id;
-    @Expose
     private String name;
-    @Expose
     private float rating;
-    @Expose
-    private String genres;
-
-    public MovieSuggestion(int id, String name, float rating, String genres) {
-        this.id = id;
-        this.name = name;
-        this.rating = rating;
-        this.genres = genres;
-    }
+    private Date date;
+    private List<Genre> genres;
 
     public int getId() {
         return id;
@@ -43,11 +35,19 @@ public class MovieSuggestion {
         this.rating = rating;
     }
 
-    public String getGenres() {
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public List<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(String genres) {
+    public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 }

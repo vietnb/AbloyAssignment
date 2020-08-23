@@ -1,17 +1,23 @@
-package abloy.assignment.bo.data;
+package abloy.assignment.service.so;
 
 import com.google.gson.annotations.Expose;
 
-import java.util.Date;
-import java.util.List;
-
-public class Movie {
-
+public class MovieSuggestion {
+    @Expose
     private int id;
+    @Expose
     private String name;
+    @Expose
     private float rating;
-    private Date date;
-    private List<Genre> genres;
+    @Expose
+    private String genres;
+
+    public MovieSuggestion(int id, String name, float rating, String genres) {
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
+        this.genres = genres;
+    }
 
     public int getId() {
         return id;
@@ -37,19 +43,11 @@ public class Movie {
         this.rating = rating;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public List<Genre> getGenres() {
+    public String getGenres() {
         return genres;
     }
 
-    public void setGenres(List<Genre> genres) {
+    public void setGenres(String genres) {
         this.genres = genres;
     }
 }
